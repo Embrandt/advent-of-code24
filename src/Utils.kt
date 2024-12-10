@@ -20,6 +20,11 @@ fun String.toNumberList() : List<Int> {
     return numberRegEx.findAll(this).map{match -> match.value.toInt()}.toList()
 }
 
+fun String.toLongNumberList() : List<Long> {
+    val numberRegEx = "(\\d+)".toRegex()
+    return numberRegEx.findAll(this).map{match -> match.value.toLong()}.toList()
+}
+
 /**
  * The cleaner shorthand for printing output.
  */
