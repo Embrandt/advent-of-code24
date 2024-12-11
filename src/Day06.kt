@@ -25,12 +25,6 @@ enum class Direction {
     }
 }
 
-typealias Position = Pair<Int, Int>
-
-private operator fun Position.plus(position: Position): Position {
-    return Position(position.first + this.first, position.second + this.second)
-}
-
 fun main() {
     fun getStartingPosition(input: List<String>): Position {
         input.forEachIndexed { y, line ->
